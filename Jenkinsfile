@@ -29,7 +29,7 @@ pipeline{
                 }
             }
         }
-        tage('Deploy to Google Cloud Run'){
+        stage('Deploy to Google Cloud Run'){
             steps{
                 withCredentials([file(credentialsId: 'gcp-key' , variable : 'GOOGLE_APPLICATION_CREDENTIALS')]){
                     script{
